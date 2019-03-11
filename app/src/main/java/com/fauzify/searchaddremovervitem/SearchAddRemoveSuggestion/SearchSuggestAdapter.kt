@@ -1,16 +1,18 @@
-package com.fauzify.searchaddremovervitem.SearchOnePage
+package com.fauzify.searchaddremovervitem.SearchAddRemoveSuggestion
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
+import android.view.OrientationEventListener
 import android.view.View
 import android.view.ViewGroup
 import com.fauzify.searchaddremovervitem.ItemModel
 import com.fauzify.searchaddremovervitem.R
+import kotlinx.android.synthetic.main.item_search_add_suggest.view.*
 import kotlinx.android.synthetic.main.item_search_one_page.view.*
 
-class SearchOnePageAdapter(val context : Context, var itemList: ArrayList<ItemModel>)
-    : RecyclerView.Adapter<SearchOnePageAdapter.ViewHolder>() {
+class SearchSuggestAdapter (val context : Context, var itemList: ArrayList<ItemModel>)
+    : RecyclerView.Adapter<SearchSuggestAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         viewHolder.txtTitle?.text = itemList[position].title
@@ -19,7 +21,7 @@ class SearchOnePageAdapter(val context : Context, var itemList: ArrayList<ItemMo
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, position: Int): ViewHolder {
         val v = LayoutInflater.from(viewGroup.context)
-                .inflate(R.layout.item_search_one_page, viewGroup, false)
+            .inflate(R.layout.item_search_add_suggest, viewGroup, false)
         return ViewHolder(v);
     }
 
@@ -28,8 +30,8 @@ class SearchOnePageAdapter(val context : Context, var itemList: ArrayList<ItemMo
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val txtTitle = itemView.tv_title
-        val txtDesc = itemView.tv_desc
+        val txtTitle = itemView.tv_title_add
+        val txtDesc = itemView.tv_desc_add
     }
 
     // To get the data to search Category
@@ -37,4 +39,5 @@ class SearchOnePageAdapter(val context : Context, var itemList: ArrayList<ItemMo
         this.itemList = filteredCourseList;
         notifyDataSetChanged();
     }
+
 }

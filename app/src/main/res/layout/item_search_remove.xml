@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:padding="10dp">
+
+    <ImageView
+            android:id="@+id/iv_photo_attendee"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher" />
+
+    <TextView
+            android:id="@+id/tv_title_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/iv_photo_attendee"
+            tools:text="title"
+            android:textSize="16sp" />
+
+    <TextView
+            android:id="@+id/tv_desc_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title_add"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_photo_attendee"
+            android:maxLines="1"
+            android:paddingTop="2dp"
+            tools:text="description"
+            android:textSize="12sp" />
+
+    <ImageView
+            android:id="@+id/iv_plus_add_attendee"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_remove_circle_red"
+            android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

@@ -11,21 +11,25 @@
             android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_margin="16dp" android:padding="8dp">
         <Button
                 android:text="Search one page"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/btn_search"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_search"/>
         <Button
-                android:text="Button"
+                android:text="Search Add Remove Suggestion"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/button2"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_suggestion"/>
         <Button
-                android:text="Button"
+                android:text="Search Add Remove Circle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/button3"/>
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_cirle"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

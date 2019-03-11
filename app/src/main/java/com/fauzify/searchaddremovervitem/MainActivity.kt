@@ -3,6 +3,7 @@ package com.fauzify.searchaddremovervitem
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.fauzify.searchaddremovervitem.SearchAddRemoveSuggestion.SearchAddRemoveSuggestActivity
 import com.fauzify.searchaddremovervitem.SearchOnePage.SearchOnePageActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -14,6 +15,10 @@ class MainActivity : AppCompatActivity() {
 
         btn_search.setOnClickListener {
             startActivity(Intent(this, SearchOnePageActivity::class.java))
+        }
+
+        btn_suggestion.setOnClickListener {
+            startActivity(Intent(this, SearchAddRemoveSuggestActivity::class.java))
         }
     }
 }

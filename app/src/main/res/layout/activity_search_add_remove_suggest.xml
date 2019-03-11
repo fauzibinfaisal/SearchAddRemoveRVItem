@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_search_add_remove_suggest"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".SearchAddRemoveSuggestion.SearchAddRemoveSuggestActivity">
+
+    <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:scrollbars="none"-->
+            <!--android:paddingTop="@dimen/default_padding"-->
+            <!--android:background="@color/grey"-->
+            <!--android:fillViewport="true">-->
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                    android:id="@+id/rl_search_add_remove_suggest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <EditText
+                        android:id="@+id/et_search_add_remove_suggest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="26dp"
+                        android:layout_marginEnd="26dp"
+                        android:hint="@string/search"
+                        android:inputType="textFilter"
+                        android:padding="16dp"
+                        android:textSize="14sp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:id="@+id/ll_search_remove_item_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_search_add_remove_suggest"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Added Item List"
+                        android:textSize="14sp"/>
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_search_remove_item_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        tools:listitem="@layout/item_search_remove"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                    android:id="@+id/card_search_add_suggest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_search_add_remove_suggest"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginEnd="@dimen/default_margin"
+                    android:layout_marginBottom="@dimen/default_margin"
+                    android:elevation="8dp"
+                    android:visibility="invisible">
+
+                <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_search_add_suggest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_search_add_suggest"/>
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    <!--</ScrollView>-->
+</android.support.design.widget.CoordinatorLayout>
